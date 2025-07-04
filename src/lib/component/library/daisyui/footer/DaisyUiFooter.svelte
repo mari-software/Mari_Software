@@ -5,6 +5,6 @@
     }>();
 </script>
 
-<footer class="d-footer sm:d-footer-horizontal bg-base-200 text-base-content p-10 {className}">
+<footer class="d-footer sm:d-footer-horizontal  text-base-content p-1 {className}">
   {@render children()}
 </footer>
