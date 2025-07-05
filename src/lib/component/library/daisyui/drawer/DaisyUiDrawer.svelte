@@ -1,6 +1,17 @@
+<script lang="ts">
+	import DaisyUiInputField from '../inputfield/DaisyUiInputField.svelte';
+
+	let { drawerName, className } = $props<{
+		drawerName: string;
+	}>();
+</script>
 
 <div class="d-drawer">
-	<input id="my-drawer" type="checkbox" class="d-drawer-toggle" />
+	<DaisyUiInputField
+		inputType="checkbox"
+		id={drawerName}
+		className="d-drawer-toggle"
+	/>
 	<div class="d-drawer-content">
 		<!-- Page content here -->
 		<label for="my-drawer" class="d-btn d-btn-primary d-drawer-button"

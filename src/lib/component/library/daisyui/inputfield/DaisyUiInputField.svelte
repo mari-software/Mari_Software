@@ -1,5 +1,6 @@
 <script lang="ts">
 	let {
+		id,
 		className,
 		inputPlaceholderText,
 		inputType,
@@ -7,8 +8,12 @@
 		inputTitle,
 		minLength,
 		maxlength,
-		nameText
+		nameText,
+		value,
+		ariaLabel,
+		rawStyle
 	} = $props<{
+		id?: string;
 		className?: string;
 		inputPlaceholderText?: string;
 		inputType?: string;
@@ -17,17 +22,40 @@
 		minLength?: number;
 		maxlength?: number;
 		nameText?: string;
+		value?: string;
+		ariaLabel?: string;
+		rawStyle?: boolean;
 	}>();
 </script>
 
-<input
-	class="d-input {className}"
-	type={inputType}
-	required
-	placeholder={inputPlaceholderText}
-	pattern={inputPattern}
-	minlength={minLength ?? 1}
-	maxlength={maxlength ?? 50}
-	title={inputTitle}
-	name={nameText}
-/>
+{#if rawStyle}
+	<input
+		{id}
+		class={className}
+		type={inputType}
+		required
+		placeholder={inputPlaceholderText}
+		pattern={inputPattern}
+		minlength={minLength ?? 1}
+		maxlength={maxlength ?? 50}
+		title={inputTitle}
+		name={nameText}
+		{value}
+		aria-label={ariaLabel}
+	/>
+{:else}
+	<input
+		{id}
+		class="d-input {className}"
+		type={inputType}
+		required
+		placeholder={inputPlaceholderText}
+		pattern={inputPattern}
+		minlength={minLength ?? 1}
+		maxlength={maxlength ?? 50}
+		title={inputTitle}
+		name={nameText}
+		{value}
+		aria-label={ariaLabel}
+	/>
+{/if}
