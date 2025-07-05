@@ -1,5 +1,5 @@
 <script>
-	import LNotificationsWrapper from '$lib/component/local/index/app/notifications/LNotificationsWrapper.svelte';
+	import LNotificationsWrapper from '$lib/component/local/index/app/other/notifications/LNotificationsWrapper.svelte';
 
 	const notification = [
 		{

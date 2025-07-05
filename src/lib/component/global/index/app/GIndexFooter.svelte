@@ -30,9 +30,9 @@
 
 		<section class="">
 			<h6 class="d-footer-title">About Mari</h6>
-			<DaisyUiLink href="/app/about">About</DaisyUiLink>
+			<DaisyUiLink href="/app/other/about">About</DaisyUiLink>
 			<DaisyUiLink href="">Contact</DaisyUiLink>
-			<DaisyUiLink href="/app/faq">FAQs</DaisyUiLink>
+			<DaisyUiLink href="/app/other/faq">FAQs</DaisyUiLink>
 			<DaisyUiLink href="">Terms and Conditions</DaisyUiLink>
 		</section>
 

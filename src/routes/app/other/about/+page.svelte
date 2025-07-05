@@ -1,12 +1,12 @@
 <script>
-	import LAboutCollaboratingUnits from '$lib/component/local/index/app/about/LAboutCollaboratingUnits.svelte';
-	import LAboutDescription from '$lib/component/local/index/app/about/LAboutDescription.svelte';
-	import LAboutGoals from '$lib/component/local/index/app/about/LAboutGoals.svelte';
-	import LAboutHeader from '$lib/component/local/index/app/about/LAboutHeader.svelte';
-	import LAboutMission from '$lib/component/local/index/app/about/LAboutMission.svelte';
-	import LAboutSponsors from '$lib/component/local/index/app/about/LAboutSponsors.svelte';
-	import LAboutVision from '$lib/component/local/index/app/about/LAboutVision.svelte';
 	import MariLogoSvg from '$lib/asset/image/svg/MariLogoSvg.svelte';
+	import LAboutCollaboratingUnits from '$lib/component/local/index/app/other/about/LAboutCollaboratingUnits.svelte';
+	import LAboutDescription from '$lib/component/local/index/app/other/about/LAboutDescription.svelte';
+	import LAboutGoals from '$lib/component/local/index/app/other/about/LAboutGoals.svelte';
+	import LAboutHeader from '$lib/component/local/index/app/other/about/LAboutHeader.svelte';
+	import LAboutMission from '$lib/component/local/index/app/other/about/LAboutMission.svelte';
+	import LAboutSponsors from '$lib/component/local/index/app/other/about/LAboutSponsors.svelte';
+	import LAboutVision from '$lib/component/local/index/app/other/about/LAboutVision.svelte';
 
 	const dummyData = [
 		{

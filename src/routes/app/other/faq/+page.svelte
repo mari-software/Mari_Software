@@ -1,5 +1,6 @@
 <script>
-	import LFaqs from '$lib/component/local/index/app/faqs/LFaqs.svelte';
+	import LFaqs from '$lib/component/local/index/app/other/faqs/LFaqs.svelte';
+
 	const dummyData = [
 		{
 			id: 1,
