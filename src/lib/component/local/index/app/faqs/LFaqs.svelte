@@ -28,7 +28,7 @@
 					titleClass="m-h3"
 					content={faq.answer}
 					groupName="faq"
-					icon="arrow"
+					icon="plus"
 				/>
 			</DaisyUiCard>
 		{/each}
