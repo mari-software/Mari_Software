@@ -93,7 +93,7 @@
 		<DaisyUiStatus className="d-status-primary" effect="ping">
 			<DaisyUiButton
 				className="d-btn-ghost d-btn-circle"
-				onClick={() => goToRoute('/app/notifications')}
+				onClick={() => goToRoute('/app/notification')}
 			>
 				<LucideBell />
 			</DaisyUiButton>

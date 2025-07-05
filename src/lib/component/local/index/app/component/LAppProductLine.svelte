@@ -11,7 +11,7 @@
 		{#each productLine as product}
 			<DaisyUiCard className="bg-primary-content px-3 pt-3 py-5">
 				<figure class="size-20">
-					<svelte:component this={product.icon} />
+					<product.icon />
 				</figure>
 				<h3 class="m-h3">
 					{product.name}
