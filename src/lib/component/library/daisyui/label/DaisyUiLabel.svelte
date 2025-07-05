@@ -1,11 +1,12 @@
 <script lang="ts">
-	let { className, forName, children } = $props<{
+	let { className, forText, children } = $props<{
 		className?: string;
-		forName?: string;
+		forText?: string;
+
 		children?: () => void;
 	}>();
 </script>
 
-<label for={forName} class={className}>
+<label for={forText} class={className}>
 	{@render children()}
 </label>

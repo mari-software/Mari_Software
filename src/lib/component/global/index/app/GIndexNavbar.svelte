@@ -11,6 +11,7 @@
 	import LucideBell from '$lib/component/library/lucide/LucideBell.svelte';
 	import LucideMenu from '$lib/component/library/lucide/LucideMenu.svelte';
 	import LucideSearch from '$lib/component/library/lucide/LucideSearch.svelte';
+	import { goToRoute } from '$lib/util/sveltekit/router.sveltekit.util';
 </script>
 
 <DaisyUiNavbar className="bg-base-200 shadow-md px-5">
@@ -92,7 +93,7 @@
 		<DaisyUiStatus className="d-status-primary" effect="ping">
 			<DaisyUiButton
 				className="d-btn-ghost d-btn-circle"
-				onClick={() => console.log('Hello')}
+				onClick={() => goToRoute('/app/notifications')}
 			>
 				<LucideBell />
 			</DaisyUiButton>

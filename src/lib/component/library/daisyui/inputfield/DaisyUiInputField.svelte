@@ -6,15 +6,17 @@
 		inputPattern,
 		inputTitle,
 		minLength,
-		maxlength
+		maxlength,
+		nameText
 	} = $props<{
 		className?: string;
-		inputPlaceholderText: string;
-		inputType: string;
+		inputPlaceholderText?: string;
+		inputType?: string;
 		inputPattern?: string;
 		inputTitle?: string;
 		minLength?: number;
 		maxlength?: number;
+		nameText?: string;
 	}>();
 </script>
 
@@ -27,4 +29,5 @@
 	minlength={minLength ?? 1}
 	maxlength={maxlength ?? 50}
 	title={inputTitle}
+	name={nameText}
 />
