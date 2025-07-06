@@ -7,6 +7,10 @@
 	}>();
 </script>
 
-<label for={forText} class={className}>
-	{@render children()}
-</label>
+{#if children}
+	<label for={forText} class={className}>
+		{@render children()}
+	</label>
+{:else}
+	<label for={forText} class={className}> </label>
+{/if}

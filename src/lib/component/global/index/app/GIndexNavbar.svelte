@@ -1,8 +1,10 @@
 <script lang="ts">
 	import MariLogoSvg from '$lib/asset/image/svg/MariLogoSvg.svelte';
-	import DaisyUiAvatar from '$lib/component/library/daisyui/avatar/DaisyUiAvatar.svelte';
 	import DaisyUiButton from '$lib/component/library/daisyui/button/DaisyUiButton.svelte';
-	import DaisyUiMenu from '$lib/component/library/daisyui/menu/DaisyUiMenu.svelte';
+	import DaisyUiDrawerContent from '$lib/component/library/daisyui/drawer/content/DaisyUiDrawerContent.svelte';
+	import DaisyUiDrawer from '$lib/component/library/daisyui/drawer/DaisyUiDrawer.svelte';
+	import DaisyUiDrawerSide from '$lib/component/library/daisyui/drawer/side/DaisyUiDrawerSide.svelte';
+	import DaisyUiDrawerToggle from '$lib/component/library/daisyui/drawer/toggle/DaisyUiDrawerToggle.svelte';
 	import DaisyUiNavbarCenter from '$lib/component/library/daisyui/navbar/center/DaisyUiNavbarCenter.svelte';
 	import DaisyUiNavbar from '$lib/component/library/daisyui/navbar/DaisyUiNavbar.svelte';
 	import DaisyUiNavbarEnd from '$lib/component/library/daisyui/navbar/end/DaisyUiNavbarEnd.svelte';
@@ -12,68 +14,28 @@
 	import LucideMenu from '$lib/component/library/lucide/LucideMenu.svelte';
 	import LucideSearch from '$lib/component/library/lucide/LucideSearch.svelte';
 	import { goToRoute } from '$lib/util/sveltekit/router.sveltekit.util';
+	import GIndexDrawerContent from './GIndexDrawerContent.svelte';
 </script>
 
 <DaisyUiNavbar className="bg-base-200 shadow-md px-5">
 	<DaisyUiNavbarStart>
-		<div class="d-drawer">
-			<input id="my-drawer" type="checkbox" class="d-drawer-toggle" />
-			<div class="d-drawer-content">
-				<!-- Page content here -->
-				<label for="my-drawer" class="d-btn-ghost d-btn-circle"
-					><LucideMenu />
-				</label>
-			</div>
-			<div class="d-drawer-side">
-				<label
-					for="my-drawer"
-					aria-label="close sidebar"
-					class="d-drawer-overlay"
-				></label>
-				<DaisyUiMenu
-					className="bg-base-200 text-base-content min-h-full w-fit "
-				>
-					<DaisyUiAvatar className="d-avatar-placeholder">
-						<div
-							class="bg-neutral text-neutral-content w-10 rounded-full"
-						></div></DaisyUiAvatar
-					>
-					<p class="">Mari2020</p>
-					<p>Mari2020@gmail.com</p>
+		<DaisyUiDrawer>
+			<DaisyUiDrawerToggle drawerName="main-drawer" />
 
-					<DaisyUiButton
-						className=""
-						onClick={() => console.log('Hello')}
-						>Change Account</DaisyUiButton
-					>
-
-					<div class="">
-						<h1 class="">All Pages</h1>
-
-						<div class="leading-5">
-							<li><a href="">Pages 1</a></li>
-							<li><a href="">Pages 2</a></li>
-							<li><a href="">Pages 3</a></li>
-						</div>
-
-						<h1 class="">Categories</h1>
-
-						<div class="leading-5">
-							<li><a href="">Category 1</a></li>
-							<li><a href="">Category 2</a></li>
-							<li><a href="">Category 3</a></li>
-						</div>
-
-						<h1 class="">Help & Support</h1>
-
-						<div class="">
-							<li><a href="">Contact Us</a></li>
-							<li><a href="">FAQ</a></li>
-						</div>
-					</div>
-				</DaisyUiMenu>
-			</div>
-		</div>
+			<DaisyUiDrawerContent
+				drawerName="main-drawer"
+				className="d-btn-square"
+			>
+				<LucideMenu />
+			</DaisyUiDrawerContent>
+			<DaisyUiDrawerSide
+				drawerName="main-drawer"
+				drawerClassName="w-72"
+			>
+				<!-- Drawer Content -->
+				<GIndexDrawerContent />
+			</DaisyUiDrawerSide>
+		</DaisyUiDrawer>
 	</DaisyUiNavbarStart>
 
 	<DaisyUiNavbarCenter>
