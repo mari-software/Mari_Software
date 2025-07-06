@@ -5,6 +5,7 @@
 	import DaisyUiCardBody from '$lib/component/library/daisyui/card/body/DaisyUiCardBody.svelte';
 	import DaisyUiCardBodyTitle from '$lib/component/library/daisyui/card/body/title/DaisyUiCardBodyTitle.svelte';
 	import DaisyUiCard from '$lib/component/library/daisyui/card/DaisyUiCard.svelte';
+	import { goToRoute } from '$lib/util/sveltekit/router.sveltekit.util';
 </script>
 
 <section id="app-hero">
@@ -18,7 +19,7 @@
 			<DaisyUiCardBodyAction>
 				<DaisyUiButton
 					className="d-btn-primary m-h4"
-					onClick={() => console.log()}
+					onClick={() => goToRoute('/app/main/categories')}
 				>
 					See More
 				</DaisyUiButton>
